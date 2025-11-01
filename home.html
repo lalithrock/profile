@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lalith Kumar — Python Developer</title>
+
+  <!-- Google Font + Font Awesome -->
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    :root{
+      --bg1:#060b20;
+      --bg2:#0d1b42;
+      --accent1:#3cb9ff;
+      --accent2:#9a6bff;
+      --text:#f0f4ff;
+      --muted:#a8b1cc;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    html,body{scroll-behavior:smooth;}
+    body{
+      font-family:'Sora',sans-serif;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:var(--text);
+      overflow-x:hidden;
+    }
+
+    header{
+      position:fixed;top:0;left:0;right:0;z-index:100;
+      display:flex;justify-content:space-between;align-items:center;
+      padding:14px 30px;
+      background:rgba(255,255,255,0.03);
+      backdrop-filter:blur(8px);
+      border-bottom:1px solid rgba(255,255,255,0.05);
+    }
+    .neon{font-size:24px;font-weight:700;color:var(--accent1);text-shadow:0 0 10px rgba(60,185,255,.6);}
+    nav{display:flex;gap:12px;}
+    nav a{
+      color:var(--muted);text-decoration:none;font-weight:600;padding:8px 12px;
+      border-radius:8px;font-size:16px;transition:.3s;
+    }
+    nav a:hover,nav a.active{color:var(--text);background:rgba(255,255,255,0.08);}
+
+    .container{max-width:1100px;margin:100px auto 0;padding:0 20px;}
+
+    /* HERO SECTION */
+    #hero{
+      width:100%;
+      background:linear-gradient(120deg,#18244d 0%,#1e2d5e 50%,#291a5a 100%);
+      display:flex;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;
+      padding:80px 40px;
+      border-radius:0 0 60px 60px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.6);
+      position:relative;
+    }
+
+    .hero-left{
+      flex:1;
+      min-width:300px;
+      z-index:2;
+    }
+    .hero-left h2{font-size:48px;font-weight:700;margin-bottom:10px;}
+    .tagline{color:var(--accent2);font-weight:600;margin-bottom:12px;font-size:20px;}
+    .hero-left p{color:var(--muted);font-size:18px;margin-bottom:20px;line-height:1.6;}
+    .cta{display:flex;gap:10px;flex-wrap:wrap;}
+    .btn{
+      padding:12px 20px;border-radius:10px;font-weight:600;font-size:16px;
+      text-decoration:none;transition:.3s;display:inline-flex;align-items:center;
+    }
+    .btn-primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#021021;}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.1);color:var(--text);}
+    .btn-ghost:hover{background:rgba(255,255,255,0.08);}
+
+    .hero-right{
+      flex:1;
+      display:flex;justify-content:center;align-items:center;
+      position:relative;
+      min-width:300px;
+    }
+    .photo-bg{
+      position:absolute;
+      width:360px;height:360px;
+      background:radial-gradient(circle at top,var(--accent2),var(--accent1));
+      border-radius:50%;
+      filter:blur(80px);
+      opacity:0.4;
+      z-index:1;
+    }
+    .avatar-wrap{
+      width:320px;height:320px;
+      border-radius:50%;
+      background:linear-gradient(180deg,rgba(255,255,255,0.1),rgba(255,255,255,0.05));
+      display:flex;align-items:center;justify-content:center;
+      box-shadow:0 0 50px rgba(60,185,255,0.4);
+      position:relative;
+      z-index:2;
+      overflow:hidden;
+    }
+    .avatar{width:100%;height:100%;object-fit:cover;border-radius:50%;}
+
+    /* Sections */
+    section{padding:40px 0;}
+    .section-title h2{color:var(--accent2);font-size:26px;margin-bottom:10px;}
+    .section-intro{color:var(--muted);font-size:17px;line-height:1.6;margin-bottom:10px;}
+
+    /* Skills */
+    .skills-grid{display:flex;flex-wrap:wrap;gap:10px;margin-top:10px;}
+    .skill{
+      display:flex;align-items:center;gap:8px;
+      padding:10px 14px;border-radius:10px;background:rgba(255,255,255,0.05);
+      font-weight:600;font-size:17px;transition:.3s;
+    }
+    .skill:hover{background:rgba(255,255,255,0.1);transform:translateY(-2px);}
+
+    /* Contact */
+    input,textarea{
+      width:100%;padding:12px;border-radius:10px;font-size:16px;
+      border:1px solid rgba(255,255,255,0.08);background:rgba(255,255,255,0.05);
+      color:var(--text);margin-bottom:10px;
+    }
+    textarea{min-height:100px;}
+    footer{text-align:center;color:var(--muted);padding:16px 0;font-size:15px;}
+
+    @media(max-width:900px){
+      #hero{flex-direction:column;text-align:center;padding:60px 20px;}
+      .hero-left h2{font-size:36px;}
+      .avatar-wrap{width:260px;height:260px;}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="neon">LALITH KUMAR</div>
+    <nav>
+      <a href="#education">Education</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="projects.html">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <!-- HERO SECTION -->
+    <section id="hero">
+      <div class="hero-left">
+        <h2>Hi — I'm <span style="color:var(--accent1)">Lalith Kumar</span></h2>
+        <div class="tagline">⚙️ Python | Frontend & Backend Developer | Fresher</div>
+        <p>I develop modern, high-performance web applications using Python, Django, Flask, and MySQL. My focus is on writing efficient backend logic and designing elegant frontends with strong UX principles.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="project.html">View Projects</a>
+          <a class="btn btn-ghost" href="LALITH KUMAR.pdf" target="_blank">Download Resume</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="photo-bg"></div>
+        <div class="avatar-wrap">
+          <img src="lalith.jpg" alt="Lalith Kumar" class="avatar">
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+      <div class="section-title"><h2>Education</h2></div>
+      <p><strong>B.Com</strong> — Annamalai University (2022–2025)</p>
+      <p><strong>PGDCA</strong> — Power I Insys Computer Education (2024–2025)</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-title"><h2>About</h2></div>
+      <div class="section-intro">
+        I'm Lalith Kumar.V, a full stack developer with a unique academic foundation in commerce and digital arts, now fully immersed in the world of technology. My journey from business principles to backend logic has shaped me into a developer who understands both user needs and system architecture.
+I’ve completed my Bachelor of Commerce from Annamalai University and a PGDCA from Power I Insys, along with certifications in Python Full Stack Development, Microsoft Employability Skills, Green Skills Passport, and English Typewriting (Distinction). These diverse experiences have sharpened my analytical thinking, design sensibility, and technical execution.
+
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="section-title"><h2>Skills</h2></div>
+      <div class="skills-grid" id="skillsGrid"></div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-title"><h2>Contact</h2></div>
+      <form id="contactForm">
+        <input id="cname" type="text" placeholder="Your Name" required>
+        <input id="cemail" type="email" placeholder="Your Email" required>
+        <textarea id="cmessage" placeholder="Your Message" required></textarea>
+        <div class="cta">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <a class="btn btn-ghost" href="mailto:lalithkumarv39@gmail.com">Email</a>
+        </div>
+        <div id="formStatus" style="margin-top:6px;color:var(--muted);font-weight:600;"></div>
+      </form>
+    </section>
+
+    <footer>© 2025 Lalith Kumar — Python Developer | Frontend & Backend Developer</footer>
+  </div>
+
+  <script>
+    const SKILLS = [
+      { name: "Python", icon: "fa-brands fa-python" },
+      { name: "Django", icon: "fa-solid fa-leaf" },
+      { name: "Flask", icon: "fa-solid fa-flask" },
+      { name: "HTML5", icon: "fa-brands fa-html5" },
+      { name: "CSS3", icon: "fa-brands fa-css3-alt" },
+      { name: "JavaScript", icon: "fa-brands fa-js" },
+      { name: "Bootstrap", icon: "fa-brands fa-bootstrap" },
+      { name: "MySQL", icon: "fa-solid fa-database" },
+      { name: "Git & GitHub", icon: "fa-brands fa-github" }
+    ];
+
+    const grid = document.getElementById("skillsGrid");
+    SKILLS.forEach(s => {
+      const el = document.createElement("div");
+      el.className = "skill";
+      el.innerHTML = `<i class="${s.icon}" style="font-size:18px;color:var(--accent1)"></i> ${s.name}`;
+      grid.appendChild(el);
+    });
+
+    document.getElementById("contactForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const n = document.getElementById("cname").value;
+      const eaddr = document.getElementById("cemail").value;
+      const msg = document.getElementById("cmessage").value;
+      document.getElementById("formStatus").textContent = "Opening mail client...";
+      window.location.href = `mailto:lalithkumarv39@gmail.com?subject=Portfolio Contact from ${encodeURIComponent(n)}&body=${encodeURIComponent(msg)}%0D%0AEmail: ${encodeURIComponent(eaddr)}`;
+    });
+  </script>
+</body>
+</html>

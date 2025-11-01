@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Projects — Lalith Kumar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#060b20;
+      --bg2:#0d1b42;
+      --accent1:#3cb9ff;
+      --accent2:#9a6bff;
+      --text:#f0f4ff;
+      --muted:#a8b1cc;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body{
+      font-family:'Sora',sans-serif;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));
+      color:var(--text);padding:0 20px 60px;
+    }
+    header{
+      display:flex;justify-content:space-between;align-items:center;
+      padding:16px 0;margin-bottom:20px;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .neon{font-size:22px;font-weight:700;color:var(--accent1);text-shadow:0 0 8px rgba(60,185,255,.5);}
+    a{text-decoration:none;color:var(--accent2);}
+    .container{max-width:1000px;margin:auto;}
+    h1{font-size:32px;color:var(--accent1);margin-bottom:10px;text-align:center;}
+    p.subtitle{text-align:center;color:var(--muted);margin-bottom:30px;}
+    .project-card{
+      background:rgba(255,255,255,0.05);
+      border:1px solid rgba(255,255,255,0.07);
+      border-radius:12px;
+      padding:20px;
+      margin-bottom:24px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.3);
+    }
+    .project-card h2{color:var(--accent2);font-size:22px;margin-bottom:6px;}
+    .project-card p{color:var(--muted);font-size:15px;line-height:1.6;margin-bottom:10px;}
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:10px;}
+    .tag{
+      background:rgba(255,255,255,0.07);
+      padding:6px 10px;border-radius:999px;font-size:13px;color:var(--text);
+    }
+    footer{text-align:center;color:var(--muted);margin-top:40px;font-size:14px;}
+    .btn-back{
+      display:inline-block;margin-top:20px;
+      padding:8px 14px;border-radius:8px;
+      border:1px solid rgba(255,255,255,0.08);
+      color:var(--text);transition:.3s;
+    }
+    .btn-back:hover{background:rgba(255,255,255,0.1);}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="neon">LALITH KUMAR</div>
+    <a href="home.html" class="btn-back">← Back to Portfolio</a>
+  </header>
+
+  <div class="container">
+    <h1>My Projects</h1>
+    <p class="subtitle">A closer look at my featured work — practical and full stack ready.</p>
+
+    <div class="project-card">
+      <h2>Turf Booking Website</h2>
+      <p>A Django + MySQL web app for booking sports turfs with user authentication, admin management, and a responsive UI.</p>
+      <div class="tags">
+        <div class="tag">Python</div>
+        <div class="tag">Django</div>
+        <div class="tag">MySQL</div>
+        <div class="tag">Bootstrap</div>
+      </div>
+      <a href="https://github.com/lalithrock/CRIKECT" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <h2>Gym Weight Driven System</h2>
+      <p>A Flask-based application to manage gym members, track workout progress, and generate performance reports.</p>
+      <div class="tags">
+        <div class="tag">Flask</div>
+        <div class="tag">Python</div>
+        <div class="tag">MySQL</div>
+        <div class="tag">HTML/CSS</div>
+      </div>
+      <a href="https://github.com/lalithrock/gym-weight-driven-system" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <div class="project-card">
+      <h2>Personal Portfolio</h2>
+      <p>This portfolio website showcases my projects, skills, and educational background with a modern glassmorphism-inspired design.</p>
+      <div class="tags">
+        <div class="tag">HTML</div>
+        <div class="tag">CSS</div>
+        <div class="tag">JavaScript</div>
+      </div>
+      <a href="https://github.com/lalithrock" target="_blank">🔗 View on GitHub</a>
+    </div>
+
+    <footer>© 2025 Lalith Kumar • Python Developer</footer>
+  </div>
+</body>
+</html>
